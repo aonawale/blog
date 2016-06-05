@@ -1,0 +1,18 @@
+<header>
+  <h1 class="title">{{#link-to "article" model}}{{model.title}}{{/link-to}}</h1>
+  <div>
+    <time datetime={{model.createdAt}}>{{format-date model.createdAt}}</time>
+    {{#if showExcerpt}}
+      {{disqus-comment-count identifier=model.id}}
+    {{/if}}
+  </div>
+</header>
+<section class="excerpt">
+  {{#if showExcerpt}}
+    <p>{{md-text text=model.excerpt}}</p>
+    {{#link-to "article" model}}Read more...{{/link-to}}
+    <hr>
+  {{else}}
+    <p>{{md-text text=model.body}}</p>
+  {{/if}}
+</section>

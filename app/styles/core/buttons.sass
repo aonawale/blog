@@ -1,0 +1,85 @@
+.btn
+  padding: rem(15) rem(20)
+  border: 0
+  border-radius: rem(3)
+  background-color: $link-button-color
+  text-transform: uppercase
+  text-decoration: none
+  font-size: 0.7em
+  color: white
+  &.disabled, &.active
+    background: $light-copy-color
+    pointer-events: none
+    outline: none
+  &:focus
+    outline: none
+  &.mobile-svg
+    svg
+      display: none
+      fill: $link-button-color
+    span
+      display: inline
+  &.green
+    background-color: green
+  &.right
+    position: relative
+    z-index: 1
+    float: right
+
+.add-new
+  padding: rem(10) rem(14)
+  cursor: pointer
+  background-color: $link-button-color
+  border-radius: rem(2)
+  svg
+    width: rem(11)
+    height: rem(11)
+    fill: #fff
+
+.btn.with-loading:not(.mobile-svg)
+  svg.loading-icon
+    display: none
+    height: rem(11)
+    width: rem(11)
+    fill: #FFF
+    margin-right: rem(5)
+    margin-bottom: rem(-1)
+
+@media (min-width: $screen-size-640)
+  .btn.with-loading.mobile-svg
+    svg.loading-icon
+      display: none
+      height: rem(11)
+      width: rem(11)
+      fill: #FFF
+      margin-right: rem(5)
+      margin-bottom: rem(-1)
+
+// These styles needed to cascade over the the previous .mobile-svg styles
+.btn.with-loading.ember-transitioning-in
+  svg.loading-icon
+    display: inline
+
+@media (max-width: $screen-size-640)
+  .btn
+    &.mobile-svg
+      padding: rem(7.5) rem(0) rem(7.5) rem(7)
+      background-color: transparent
+      &.active
+        svg
+          fill: $light-copy-color
+      svg
+        display: block
+        width: rem(30)
+        height: rem(30)
+      span
+        display: none
+      &.with-loading
+        svg.loading-icon
+          display: none
+        &.ember-transitioning-in
+          svg:not(.loading-icon)
+            display: none
+          svg.loading-icon
+            display: block
+

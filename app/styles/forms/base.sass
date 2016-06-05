@@ -1,0 +1,77 @@
+fieldset
+  margin: 0
+  padding: .01em 0 0 0
+  border: 0
+  min-width: 0
+  &:not(:-moz-handler-blocked) fieldset
+    display: table-cell
+  .btn
+    float: right
+label
+  font-weight: 200
+input,
+textarea
+  width: 100%
+  padding: rem(10) rem(10) rem(10) rem(4)
+  border: 0
+  font-weight: 200
+  &.text-input
+    border-bottom: 1px solid #dbdbdb
+    &:focus
+      border-bottom: 1px solid #dbdbdb
+  &:focus
+    background-color: rgba(224, 224, 224, 0.3)
+    outline: none
+  &:disabled
+    opacity: 1
+    -webkit-text-fill-color: #999
+input::-moz-placeholder
+  opacity: 1
+input::-webkit-input-placeholder
+  opacity: 1
+textarea
+  resize: none
+  height: rem(100)
+
+select
+  display: block
+  width: 100%
+  padding: rem(15) rem(40) rem(15) rem(15)
+  background: $formfield-accent-color url(/images/form-select.png) no-repeat
+  background-position: 95% 50%
+  background-size: rem(16) rem(8)
+  border: 0
+  border-radius: rem(3)
+  font-size: rem(14)
+  text-transform: uppercase
+  &:focus
+    background-color: darken($formfield-accent-color, 10%)
+    outline: none
+  -webkit-appearance: none
+  -moz-appearance: none
+select::-ms-expand
+      display: none
+option
+  background-color: white
+  color: $dark-copy-color
+  padding: rem(3)
+
+.double-inline-select
+  display: inline-block
+  width: 49%
+.triple-inline-select
+  display: inline-block
+  width: 32%
+.additive-select
+  select
+    display: inline-block
+    width: 78%
+  .add-new
+    float: right
+    margin-top: rem(10)
+    padding: rem(14) rem(18)
+
+  @media(min-width: $screen-size-480)
+    select
+      width: 85%
+

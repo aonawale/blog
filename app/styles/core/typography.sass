@@ -1,0 +1,37 @@
+p, h1, h2, h3, td, th
+  font-family: $Montserrat
+
+p
+  letter-spacing: 0.4px
+
+a
+  color: #0088cc
+  text-decoration: none
+  &:hover, &:focus
+    color: #0088cc
+    text-decoration: underline
+  &:visited
+    color: #7766AA
+
+li
+  list-style: outside none none
+
+ul, li
+  list-style: none
+  padding: 0
+
+p.empty
+  padding-top: rem(20)
+  font-style: italic
+  font-weight: 400
+  font-size: rem(16)
+  color: #3bcfd5
+
+  @media (max-width: $screen-size-992)
+    padding-bottom: rem(20)
+
+p.subtitle
+  text-transform: uppercase
+  font-size: rem(12)
+  font-weight: 400
+  color: $light-copy-color

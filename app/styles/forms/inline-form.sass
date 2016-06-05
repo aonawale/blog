@@ -1,0 +1,48 @@
+article.inline-form
+  margin: rem(-30) rem(-45) rem(25) rem(-45)
+  padding: rem(20) rem(60) rem(50) rem(60)
+  background: #fff
+  color: #999
+  h2
+    margin-bottom: rem(10)
+  h3
+    font-size: rem(25)
+    font-weight: 200
+    margin-bottom: rem(15)
+  fieldset
+    width: 100%
+    max-width: rem(360)
+  label
+    display: none
+  select
+    margin: rem(10) 0
+  input
+    margin-bottom: rem(10)
+  .close-inline-form
+    position: absolute
+    right: rem(30)
+    z-index: 1
+    font-size: rem(40)
+    line-height: rem(40)
+    color: $dark-copy-color
+    cursor: pointer
+  article.box-header
+    margin-bottom: rem(25)
+  .show-labels
+    label
+      display: inline
+      &.block
+        display: block
+        margin-bottom: rem(10)
+
+
+
+  @media(min-width: $screen-size-640)
+    margin: rem(-25) rem(-45) rem(25) rem(-45)
+
+  @media(min-width: $screen-size-1024)
+    fieldset
+      display: inline-block
+      margin-right: rem(60)
+      vertical-align: top
+
