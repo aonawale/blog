@@ -1,18 +1,36 @@
-<section id="home" class="text-center">
-   <div class="content">
-      <h1>Hi, I'm Ahmed</h1>
-      {{typed-string 
-        strings=strings
-        cursorChar=cursorChar
-        contentType=contentType
-        loop=loop
-        loopCount=loopCount
-        typeSpeed=typeSpeed
-        backSpeed=backSpeed
-        startDelay=startDelay
-        backDelay=backDelay
-        showCursor=showCursor
-        class="typed-string"
-      }}
-   </div>
+<section id="home" class="text-center content">
+  <div class="">
+    {{#link-to "about"}}
+      <img src="images/ahmedonawale.jpg">
+    {{/link-to}}
+    <h1>Hi, I'm Ahmed</h1>
+    {{typed-string 
+      strings=strings
+      cursorChar=cursorChar
+      contentType=contentType
+      loop=loop
+      loopCount=loopCount
+      typeSpeed=typeSpeed
+      backSpeed=backSpeed
+      startDelay=startDelay
+      backDelay=backDelay
+      showCursor=showCursor
+      class="typed-string"
+    }}
+    <span class="typed-string">Developer</span>
+  </div>
+  <div class="svg-icons">
+    <a href="https://www.twitter.com/ahmedonawale/" target="_blank">
+      {{svg-icon class="icons" type="twitter"}}
+    </a>
+    <a href="https://ng.linkedin.com/in/ahmedonawale" target="_blank">
+      {{svg-icon class="icons" type="linkedin"}}
+    </a>
+    <a href="https://github.com/aonawale" target="_blank">
+      {{svg-icon class="icons" type="github"}}
+    </a>
+    <a href="mailto:ahmedonawale@gmail.com">
+      {{svg-icon class="icons" type="email"}}
+    </a>
+  </div>
 </section>
