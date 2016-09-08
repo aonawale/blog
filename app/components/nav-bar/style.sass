@@ -1,0 +1,110 @@
+.navigation
+  top: 0
+  z-index: 10
+  position: fixed
+  transition: all 0.8s
+  width: 100%
+  height: rem(50)
+  border-bottom: rem(1) solid #eee
+  font-family: $Montserrat
+  background-color: #ffffff
+  .navbar-brand
+    height: 100%
+    margin-left: 11%
+    color: #444444
+  .navbar-brand > img
+    height: rem(30)
+    display: block
+    padding: 10px
+  .navbar-right
+    margin-right: 8%
+    float: right
+  &.navbar .navbar-nav > li
+    display: inline-block
+    height: 100%
+  &.navbar .navbar-nav > li > a
+    text-transform: uppercase
+    color: #444444
+    font-size: 12px
+    letter-spacing: 1px
+    padding: rem(16)
+    display: block
+  &.navbar .navbar-nav > li > a.active
+    color: #333 !important
+    background-color: $nav-active-color
+    font-weight: 700
+    &:hover, &:focus
+      color: #333 !important
+      background-color: $nav-active-color
+      font-weight: 700
+  .navbar-nav
+    display: inline-block
+
+  .navbar-toggle
+    display: none
+    padding: rem(6)
+    margin-top: rem(7)
+    margin-right: 2%
+    float: right
+    border: none
+    background-color: #444444
+    .icon-bar
+      background-color: #fff
+      width: rem(22)
+      height: rem(2)
+      display: block
+      margin: rem(4)
+  .navbar-toggle:focus
+    outline: none
+
+.navbar-default
+  background-color: #fff !important
+  .navbar-toggle
+    &:hover, &:focus
+      background-color: #444444
+      border-color: #444444
+      color: #fff
+
+.navbar-default .navbar-toggle
+  &:hover > .icon-bar, &:focus > .icon-bar
+    background-color: #fff !important
+
+@media(max-width: $screen-size-1024)
+  .navigation
+    &.navbar .navbar-nav > li > a
+      padding: rem(16) rem(14)
+    .navbar-brand
+      margin-left: 4%
+    .navbar-right
+      margin-right: 3%
+
+@media(max-width: $screen-size-992)
+  .navigation
+    .navbar-brand
+      margin-left: 4%
+    .navbar-right
+      margin-right: 3%
+
+@media(max-width: $screen-size-768)
+  .navigation
+    .navbar-brand
+      margin-left: 3%
+    .navbar-right
+      margin-right: 2%
+
+@media(max-width: $screen-size-480)
+  .navigation
+    .navbar-brand
+      margin-left: 1%
+    .navbar-right
+      display: block
+      position: absolute
+      background-color: white
+      width: 100%
+      margin-top: rem(-5)
+    &.navbar .navbar-nav > li
+      display: block
+    .navbar-right.hidden
+      display: none
+    .navbar-toggle
+      display: block
