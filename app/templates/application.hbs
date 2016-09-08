@@ -1,40 +1,5 @@
-<!-- Navigation -->
-<nav id="main-menu" class="navbar navbar-default navbar-fixed-top on">
-  <div class="container">
-    <div class="navbar-header">
-       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-       <span class="sr-only">Toggle navigation</span>
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-       <span class="icon-bar"></span>
-       </button>
-       <a href="#"><img src="images/logo.png" style="height:50px;padding:10px;"></a>
-       <!-- <a class="navbar-brand" href="index.html">David Rodríguez</a> -->
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-       <ul class="nav navbar-nav navbar-right">
-          {{nav-link name="Home" route="application" active=true}}
-          {{nav-link name="Blog" route="blog"}}
-          {{nav-link name="Portfolio" route="portfolio"}}
-          {{nav-link name="About" route="about"}}
-       </ul>
-    </div>
-    <!-- /.navbar-collapse -->
- </div>
-   <!-- /.container-fluid -->
-</nav>
-
-{{outlet}}
-
-<!-- Footer -->
-<footer id="footer">
-   <div class="container">
-      <p>©2016 Ahmed Onawale. All Rights Reserved.</p>
-      <ul class="footer-social">
-         <li><a href="https://ng.linkedin.com/in/ahmedonawale"><i class="fa fa-linkedin wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s;"></i></a></li>
-         <li><a href="https://github.com/andela-aonawale"><i class="fa fa-github wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s;"></i></a> </li>
-         <li><a href="https://www.instagram.com/thisisammyreal/"><i class="fa fa-instagram wow fadeInUp animated" data-wow-duration="1s" data-wow-delay="0.6s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.6s;"></i></a></li>
-      </ul>
-   </div>
-</footer>
+{{partial "application/header"}}
+<section class="content">
+  {{outlet}}
+</section>
+{{partial "application/footer"}}

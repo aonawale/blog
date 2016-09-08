@@ -1,0 +1,9 @@
+<nav id="navigation" class="navbar">
+  <a class="navbar-brand navbar-nav"><img src="images/logo.png"></a>
+  <ul class="navbar-right navbar-nav">
+    <li>{{link-to "Home" "application" active=(equal currentRouteName "index")}}</li>
+    <li>{{link-to "Blog" "blog" active=(equal currentRouteName "blog" "article")}}</li>
+    <li>{{link-to "Portfolio" "portfolio" active=(equal currentRouteName "portfolio")}}</li>
+    <li>{{link-to "About" "about" active=(equal currentRouteName "about")}}</li>
+  </ul>
+</nav>

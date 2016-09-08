@@ -1,22 +1,32 @@
 #about
+  margin: rem(15)
+  padding: rem(15)
+  width: 90%
   h3
     display: block
     font-size: 18px
     letter-spacing: 3px
     text-transform: uppercase
-    margin-top: 15px
-    padding: 1px 0px
+    padding: 8px 0px
     color: #222
     font-weight: 400
+    text-align: start
+  .photo
+    width: 50%
+    display: inline-block
+    margin-bottom: -6px !important
   .img-about
     border: 1px solid #fff
-    margin-top: 18px
-    width: 520px
+    margin-top: rem(20)
+    width: 100%
   .bio
-    background-color: #91F1E7
-    margin-left: -100px
-    margin-top: 70px
-    padding: 14px 31px 33px 35px
+    position: relative
+    width: 50%
+    display: inline-block
+    background-color: $secondary-color
+    margin-left: rem(-50)
+  .about-text
+    padding: rem(20)
   hr
     border-color: #333
     border-width: 1px
@@ -26,6 +36,7 @@
     width: 100px
   p.intro
     margin: 10px 0 0
+    text-align: start
   .social
     margin-top: 19px
     text-align: left
@@ -48,146 +59,22 @@
     margin-top: 35px
     padding-right: 30px
 
-/*#about .social:hover li a{color:#fff;}
-
-.skills-item
-  position: relative
-  height: 2px
-  margin-top: 12px
-  margin-bottom: 20px
-
-.skills .skills-item
-  .skills-item-progress
-    position: relative
-    width: 0
-    height: 2px
-    background-color: #030303
-    transition: 2s
-    &:after
-      background: none
-      box-shadow: 0 0 0 5px
-      opacity: 0.3
-  &.animated .skills-item-progress
-    width: 100%
-
-.skills-item
-  .counter
-    position: absolute
-    display: block
-    font-size: 13px
-    text-align: center
-    width: 46px
-    height: 24px
-    line-height: 24px
-    margin: auto
-    top: 0
-    bottom: 0
-    right: 0
-    color: #030303
-    -webkit-backface-visibility: hidden
-    backface-visibility: hidden
-    -webkit-transform: translate(50%, -100%)
-    -moz-transform: translate(50%, -100%)
-    -ms-transform: translate(50%, -100%)
-    -o-transform: translate(50%, -100%)
-    transform: translate(50%, -100%)
-  .count
-    margin-right: -4px
-
-.skills .progress-title
-  color: #222222
-  font-size: 14px
-  letter-spacing: 2px
-  margin-top: 33px
-  text-transform: uppercase
-
-@media (max-width: 992px)
-  .content
-    padding: 19% 0 20%
+@media(max-width: $screen-size-768)
   #about
-    .bio
-      margin-bottom: 60px
-    .skills
-      padding-top: 20px
-      clear: both
-
-@media (max-width: 768px)
-  .content
-    padding: 24% 0 25%
-  #about
-    .bio
-      margin-top: 30px
-    hr
-      float: none
-  .col-md-4.col-sm-6.photo
-    text-align: center
-  #about .bio
-    margin-left: 0px
-  .hover-bg
-    .hover-text
-      background-color: rgba(187, 247, 220, 0)
-      opacity: 0
-      transition: all 0.5s
-      > h4
-        opacity: 0
-    &:hover .hover-text > h4, .hover-text > i
-      opacity: 0
-    &:hover .hover-text
-      > i
-        opacity: 0
-      opacity: 0
-    .line
-      background: #444 none repeat scroll 0 0
-      color: black
-      height: 2px
-      text-align: center
-      width: 66px
-
-@media (max-width: 603px)
-  #tf-menu.navbar-default
-    background-color: rgba(0, 0, 0, 0.79)
-  #tf-works li
-    &.pull-right, &.pull-left
-      margin-top: 10px
-      float: none !important
-      text-align: center
+    .photo
       display: block
-  label
-    float: none !important
-  .pull-left.fnav, .pull-right.fnav
-    float: none !important
-    text-align: center
-  .portfolio-item
-    width: 100%
-  .hover-bg .hover-text
-    padding: 12% 10%
-  #home
-    h1
-      font-size: 40px
-      padding-top: 80px
-    p.lead
-      font-size: 16px
-  #about .bio
-    margin-left: 0px
+      margin: auto
+      width: 65%
+    .bio
+      display: block
+      margin: auto
+      width: 65%
+      text-align: start
 
-@media (max-width: 450px)
-  #home
-    h1
-      font-size: 30px
-    p.lead
-      font-size: 14px
-      font-weight: lighter
-  #footer p
-    font-size: 12px
-
-@media (max-width: 360px)
-  #home h1
-    font-size: 25px
-  #main-menu a.navbar-brand
-    font-size: 12px
-  .hover-bg .hover-text
-    padding: 12% 10%
-  .portfolio-item
+@media(max-width: $screen-size-480)
+  #about
+    margin: rem(15) 0
+    padding: rem(15) 0
     width: 100%
-  ol.type li
-    font-size: 10px
+    .photo, .bio
+      width: 100%

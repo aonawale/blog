@@ -24,9 +24,6 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  app.import('vendor/scripts/bootstrap.min.js');
-  app.import('vendor/styles/bootstrap.min.css');
-
   app.import('bower_components/moment/moment.js');
   app.import('bower_components/typed.js/js/typed.js');
   app.import('bower_components/typed.js/main.css');
