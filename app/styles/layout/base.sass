@@ -1,11 +1,16 @@
 html
   background-color: #FBFBFB
 body
-  position: relative
-  height: 100vh
+  background-color: #FBFBFB
+  height: auto
   font-family: $Montserrat
   color: #333
   font-weight: 300
   font-size: 14px
   line-height: 1.5
   margin: auto
+
+@media(max-height: 600px)
+  body
+    position: relative
+    min-height: rem(600)
