@@ -10,15 +10,7 @@ test('it renders', function(assert) {
   // Handle any actions with this.on('myAction', function(val) { ... });
 
   this.render(hbs`{{nav-bar}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#nav-bar}}
-      template block text
-    {{/nav-bar}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$('ul').hasClass('hidden'), true, 'Navigation links are hidden');
+  this.$('button').click();
+  assert.equal(this.$('ul').hasClass('hidden'), false, 'Navigation links are shown');
 });
