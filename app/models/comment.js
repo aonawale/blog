@@ -1,7 +1,10 @@
-import DS from 'ember-data';
+import attr from 'ember-data/attr';
+import Model from 'ember-data/model';
+import { belongsTo } from 'ember-data/relationships';
 
-export default DS.Model.extend({
-  body:                       DS.attr('string'),
-  createdAt:                  DS.attr('date'),
-  updatedAt:                  DS.attr('date')
+export default Model.extend({
+  body:                     attr('string'),
+  createdAt:                attr('date'),
+  updatedAt:                attr('date'),
+  article:                  belongsTo('article')
 });

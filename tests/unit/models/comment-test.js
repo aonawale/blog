@@ -13,8 +13,8 @@ test('it exists', function(assert) {
 });
 
 test('should belong to an article', function(assert) {
-  const Article = this.store().modelFor('comment');
-  const relationship = get(Article, 'relationshipsByName').get('article');
+  const Comment = this.store().modelFor('comment');
+  const relationship = get(Comment, 'relationshipsByName').get('article');
 
   assert.equal(relationship.key, 'article', 'has relationship with article');
   assert.equal(relationship.kind, 'belongsTo', 'kind of relationship is belongsTo');
