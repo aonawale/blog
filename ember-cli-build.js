@@ -1,6 +1,7 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var development = EmberApp.env() === 'development';
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -8,6 +9,15 @@ module.exports = function(defaults) {
     sassOptions: {
       includePaths: ['app'],
       extension: 'sass'
+    },
+    minifyJS: {
+      enabled: !development
+    },
+    minifyCSS: {
+      enabled: !development
+    },
+    sourcemaps: {
+      enabled: development
     }
   });
 
