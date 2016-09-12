@@ -10,5 +10,5 @@ export default Ember.Controller.extend({
   startDelay: 300,
   backDelay: 500,
   showCursor: true,
-  strings: ['iOS Developer', 'Javascript Developer']
+  strings: ['iOS', 'Javascript']
 });

@@ -1,11 +1,16 @@
+#portfolio
+  margin: rem(100) 0 rem(140)
+  padding: rem(15)
+  width: 80%
+
+.portfolio-item
+  margin: auto
+  width: 32%
+  display: inline-block
+
 .portfolio-image
   width: auto
   height: 313px
-  margin: 0 auto
-
-#portfolio
-  padding: 100px 0 80px
-  background-color: #FBFBFB
 
 .categories
   padding: 10px 0 25px
@@ -16,10 +21,6 @@ ul.cat li
 #portfolio li.pull-right
   margin-top: 10px
 
-.portfolio-item
-  margin-bottom: 30px
-  width: 100%
-
 .portfolio-item-2
   margin-bottom: 70px
   width: 100%
@@ -27,3 +28,52 @@ ul.cat li
 .portfolio-item .hover-bg
   overflow: hidden
   position: relative
+
+@media(max-width: $screen-size-768)
+  #portfolio
+    width: 100%
+
+@media(max-width: $screen-size-480)
+  .portfolio-item
+    width: 90%
+    display: block
+    margin: rem(20) auto
+  .portfolio
+    height: auto
+    position: relative
+
+.hover-bg
+  .hover-text
+    position: absolute
+    text-align: center
+    margin: 0 auto
+    color: #444
+    background-color: rgba(187, 247, 220, 0.9)
+    padding: 18% 0
+    height: 100%
+    width: 100%
+    opacity: 0
+    transition: all 0.5s
+    > h4
+      opacity: 0
+      letter-spacing: 2px
+      -webkit-transform: translateY(100%)
+      transform: translateY(100%)
+      transition: all 0.4s
+  &:hover .hover-text > h4
+    opacity: 1
+    -webkit-backface-visibility: hidden
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+  .hover-text > i
+    opacity: 1
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+    transition: all 0.4s
+  &:hover .hover-text
+    > i
+      opacity: 0
+      -webkit-backface-visibility: hidden
+      -webkit-transform: translateY(100%)
+      transform: translateY(100%)
+    opacity: 1

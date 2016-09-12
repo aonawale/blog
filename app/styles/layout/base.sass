@@ -1,7 +1,8 @@
 html
-  height: 100%
+  background-color: #FBFBFB
 body
-  height: 100%
+  background-color: #FBFBFB
+  height: auto
   font-family: $Montserrat
   color: #333
   font-weight: 300
@@ -9,16 +10,7 @@ body
   line-height: 1.5
   margin: auto
 
-@media (min-width: $screen-size-640)
-  #left-border
-    position: fixed
-    top: 0
-    bottom: 0
-    width: rem($nav-width-mobile)
-    background-color: $nav-background-color
-
-
-@media (min-width: $screen-size-1360)
-  #left-border
-    width: rem($nav-width-desktop)
-
+@media(max-height: 600px)
+  body
+    position: relative
+    min-height: rem(600)

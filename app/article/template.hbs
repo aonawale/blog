@@ -1,10 +1,4 @@
-<section id="blog">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        {{blog-article model=model}}
-        {{disqus-comments identifier=model.id title=model.title}}
-      </div>
-    </div>
-  </div>
+<section class="blog-content">
+  {{blog-article model=model}}
+  {{disqus-comments identifier=model.id title=model.title}}
 </section>

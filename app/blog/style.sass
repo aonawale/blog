@@ -1,3 +1,24 @@
-#blog
-  padding: 100px 0 80px
-  background-color: #FBFBFB
+.blog-content
+  margin: rem(100) 0 rem(140)
+  padding: rem(15)
+  width: 80%
+  .disqus-comments
+    padding: rem(15)
+
+.blog, .article
+    height: auto
+    position: relative
+
+@media(max-width: $screen-size-768)
+  .blog-content
+    width: 100%
+
+@media(max-width: $screen-size-480)
+  .blog-content
+    padding: rem(15) rem(3)
+  .portfolio
+    height: auto
+
+@media(max-width: $screen-size-320)
+  .blog-content
+    padding: rem(15) rem(0)
