@@ -15,6 +15,9 @@ module.exports = function(defaults) {
     },
     minifyCSS: {
       enabled: !development
+    },
+    sourcemaps: {
+      enabled: development
     }
   });
 
