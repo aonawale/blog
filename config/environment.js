@@ -22,6 +22,12 @@ module.exports = function(environment) {
 
     disqus: {
       shortname: 'ahmedonawale'
+    },
+    
+    EmberENV: {
+      EXTEND_PROTOTYPES: {
+        date: false
+      }
     }
   };
 
